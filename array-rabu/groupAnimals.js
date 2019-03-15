@@ -24,17 +24,17 @@ function groupAnimals(animals){
 
   selectionSortFirstCharOfString(animals)
 
-  var previusChar = animals[0].charAt(0)
+  var previusChar = animals[0][0]
   var arrayNow = []
 
   for(var i=0; i<animals.length; i++){
     
-    if(previusChar !== animals[i].charAt(0)){
+    if(previusChar !== animals[i][0]){
       output.push(arrayNow)
       arrayNow = []
     }
     arrayNow.push(animals[i])
-    previusChar = animals[i].charAt(0)
+    previusChar = animals[i][0]
   }
 
   output.push(arrayNow)
